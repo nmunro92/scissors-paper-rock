@@ -7,6 +7,7 @@ let computerScore = 0;
 
 //Get the players name
 let playerName = prompt("What's your name?");
+//Display the name where ever needed
 let nameArr = document.getElementsByClassName("name");
 for(let i=0; i<nameArr.length; i++) {
 nameArr[i].innerText = playerName 
@@ -22,8 +23,13 @@ function computerPlay() {
   while ((playerScore < 3 && computerScore < 3)) {
 
 // Create a function for the player to select rock paper scissor, playerSelection. make it so the input can be case insensitive
-    let playerSelection = prompt("Rock, Paper or Scissors? Best of 5 wins!");
-playerSelection = playerSelection.toLowerCase();
+    function playerPlay () {
+        window.addEventListener(onclick, function (){
+            prompt(this);
+    });
+    
+    let playerSelection = playerPlay();
+//playerSelection = playerSelection.toLowerCase();
 
 //Create a function that plays rock paper scissors with the computer and declares a winner. 
 function playRound(playerSelection) {
