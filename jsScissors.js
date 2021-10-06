@@ -80,13 +80,14 @@ return myArray[Math.floor(Math.random() * myArray.length)];
         }
         else if (computerSelection == "rock")
         {
-          adocument.getElementById("result").innerHTML = "You win!";
+          document.getElementById("result").innerHTML = "You win!";
           playerScore++;
-          document.getElementById("playerscore").textContent = playerScore;
+          document.getElementById("computerscore").textContent = computerScore;
         } else if (computerSelection == "scissors") {
           document.getElementById("result").innerHTML = "You lose!";
           computerScore++;
           document.getElementById("computerscore").textContent = computerScore;
+
 
       }
     }
