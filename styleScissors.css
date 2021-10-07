@@ -5,18 +5,43 @@ header, #subtitle, #score, #result {
     justify-content: center;
 }
 
-#container {
+#choice-container {
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
 }
 
-#container > div {
+#play-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#player-choice, #computer-choice {
+    background-color: rgb(43, 43, 43);
+    height: 15em;
+    width: 17em;
+    margin: 2em;
+}
+
+#player-header, #computer-header {
+    background-color: black;
+    color: white;
+    margin-top: 0;
+    width: inherit;
+    height: 3em;
+    text-align: center;
+    position: fixed;
+
+}
+
+#choice-container > div {
     padding: 2em;
 }
 img {
-    width: 10em;
-    height: 10em;
+    width: 5em;
+    height: 5em;
 
 }

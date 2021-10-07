@@ -12,17 +12,36 @@
 </header> 
 <div id="subtitle">
   <p>
-    Play against the computer, <span class="name"> </span>!
+    Play against the computer, <span class="name"> </span>.
   </p>
 </div>
-<div id="container">
-  <div ><img id="rock" src="https://www.nicepng.com/png/detail/6-61708_rock-rock-paper-scissors-clipart.png" alt="Rock"> </div>
-  <div ><img id="scissors" src="https://www.seekpng.com/png/detail/111-1114370_rock-paper-scissors-rock-paper-scissors-clipart.png" alt="Rock"></div>
-  <div><img id = "paper" src="https://www.pngitem.com/pimgs/m/266-2667252_transparent-rock-paper-scissors-clipart-rock-paper-scissors.png" alt="Rock"></div>
+
+<div id="play-container">
+  <div id="player-choice">
+    <div id="player-header">
+      <p><span class="name"></span>: <span id="playerscore"></span></p>
+      <div id="player-move"> </div>
+    </div>
+  </div>
+
+  <div id="computer-choice">
+    <div id="computer-header">
+      <p>Computer: <span id="computerscore"></span></p>
+      <div id="computer-move"></div>
+    </div>
+    </div>
 </div>
+
 <div id="result"></div>
+
+<div id="choice-container">
+  <div ><img id="rock" src="https://www.nicepng.com/png/detail/6-61708_rock-rock-paper-scissors-clipart.png" alt="Rock"> </div>
+  <div ><img id="scissors" src="https://www.seekpng.com/png/detail/111-1114370_rock-paper-scissors-rock-paper-scissors-clipart.png" alt="Scissors"></div>
+  <div><img id = "paper" src="https://www.pngitem.com/pimgs/m/266-2667252_transparent-rock-paper-scissors-clipart-rock-paper-scissors.png" alt="Paper"></div>
+</div>
+
 <div id="score">
-  <p><span class="name"></span>: <span id="playerscore"></span>. Computer: <span id="computerscore"></span>. </p>
+  <!-- <p><span class="name"></span>: <span id="playerscore"></span>. Computer: <span id="computerscore"></span>. </p> -->
 </div>
  
 <script src="jsScissors.js"></script>
