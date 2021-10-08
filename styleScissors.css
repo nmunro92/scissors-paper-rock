@@ -1,3 +1,8 @@
+html {
+    /* background-color: blue; */
+    font-family: sans-serif;
+}
+
 header, #subtitle, #score, #result {
     display: flex;
     align-items: center;
@@ -24,6 +29,7 @@ header, #subtitle, #score, #result {
     height: 15em;
     width: 17em;
     margin: 2em;
+    border: solid white 1.5px;
 }
 
 #player-header, #computer-header {
@@ -34,14 +40,23 @@ header, #subtitle, #score, #result {
     height: 3em;
     text-align: center;
     position: fixed;
+    border-bottom: solid white 1.5px;
 
+}
+
+#computer-move, #player-move {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3em;
 }
 
 #choice-container > div {
     padding: 2em;
 }
 img {
-    width: 5em;
-    height: 5em;
+    width: 6em;
+    height: 6em;
 
 }

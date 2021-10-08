@@ -22,8 +22,15 @@ rockDiv.addEventListener("click", playRock);
 function playRock() {
   computerPlay();
   const computerSelection = computerPlay();
+  if (computerSelection == "rock") {
+    showCompRock ();
+  } else if (computerSelection == "scissors") {
+    showCompScissors ();
+  } else if (computerSelection == "paper") {
+    showCompPaper ();
+  }
   playerSelection = "rock";
-  showRock();
+  showIMG();
   if (playerSelection == computerSelection) {
     document.getElementById("result").innerHTML = "Tie!";
   } else if (computerSelection == "scissors") {
@@ -42,10 +49,18 @@ const scissorDiv = document.getElementById("scissors");
 scissorDiv.addEventListener("click", playScissors);
 function playScissors() {
   let myArray = ["rock", "paper", "scissors"];
-computerPlay(); 
+  computerPlay(); 
   const computerSelection = computerPlay();
+  if (computerSelection == "rock") {
+    showCompRock ();
+  } else if (computerSelection == "scissors") {
+    showCompScissors ();
+  } else if (computerSelection == "paper") {
+    showCompPaper ();
+  }
   playerSelection = "scissors";
-  showScissors ();
+  //showScissors ();
+    showIMG ();
   if (playerSelection == computerSelection) {
     document.getElementById("result").innerHTML = "Tie!";
   } else if (computerSelection == "paper") {
@@ -66,18 +81,25 @@ paperDiv.addEventListener("click", playPaper);
 function playPaper() {
   computerPlay(); 
   const computerSelection = computerPlay();
+  if (computerSelection == "rock") {
+    showCompRock ();
+  } else if (computerSelection == "scissors") {
+    showCompScissors ();
+  } else if (computerSelection == "paper") {
+    showCompPaper ();
+  }
   playerSelection = "paper";
-  showPaper ();
+  showIMG ();
   if (playerSelection == computerSelection) {
     document.getElementById("result").innerHTML = "Tie!";
-    showCompPaper();
+    //showCompPaper();
   } else if (computerSelection == "rock") {
-    showCompRock();
+    //showCompRock();
     document.getElementById("result").innerHTML = "You win!";
     playerScore++;
     document.getElementById("playerscore").textContent = playerScore;
   } else if (computerSelection == "scissors") {
-    showCompScissors ();
+    //showCompScissors ();
     document.getElementById("result").innerHTML = "You lose!";
     computerScore++;
     document.getElementById("computerscore").textContent = computerScore;
@@ -89,58 +111,50 @@ function computerPlay() {
   return myArray[Math.floor(Math.random() * myArray.length)];
 }
 
-
-
-
-
 //keep score updated
 document.getElementById("computerscore").textContent = computerScore;
 document.getElementById("playerscore").textContent = playerScore;
-
 
 //updating the player choice image
 function clearDiv () {
   document.getElementById("player-move").innerHTML = "";
 }
 
-function showRock() {
-  clearDiv();
-  let img = new Image ();
-  img.src="https://www.nicepng.com/png/detail/6-61708_rock-rock-paper-scissors-clipart.png"
-  document.getElementById("player-move").appendChild(img);
+function clearCompDiv () {
+  document.getElementById("computer-move").innerHTML = "";
 }
 
-function showScissors() {
+function showIMG() {
   clearDiv();
   let img = new Image ();
-  img.src="https://www.seekpng.com/png/detail/111-1114370_rock-paper-scissors-rock-paper-scissors-clipart.png"
-  document.getElementById("player-move").appendChild(img);
-}
-
-function showPaper() {
-  clearDiv();
-  let img = new Image ();
-  img.src="https://www.pngitem.com/pimgs/m/266-2667252_transparent-rock-paper-scissors-clipart-rock-paper-scissors.png"
+  if (playerSelection == "rock"){
+  img.src="rock.png"
+  } else if (playerSelection == "scissors") {
+    img.src="scissors.png"
+  } else if (playerSelection == "paper") {
+    img.src= "paper.png"
+  }
   document.getElementById("player-move").appendChild(img);
 }
 
 function showCompRock() {
-  clearDiv();
+  clearCompDiv();
   let img = new Image ();
-  img.src="https://www.nicepng.com/png/detail/6-61708_rock-rock-paper-scissors-clipart.png"
+  img.src="rock.png";
   document.getElementById("computer-move").appendChild(img);
 }
 
 function showCompScissors() {
-  clearDiv();
+  clearCompDiv();
   let img = new Image ();
-  img.src="https://www.seekpng.com/png/detail/111-1114370_rock-paper-scissors-rock-paper-scissors-clipart.png"
+  img.src="scissors.png";
   document.getElementById("computer-move").appendChild(img);
 }
 
 function showCompPaper() {
-  clearDiv();
+  clearCompDiv();
   let img = new Image ();
-  img.src="https://www.pngitem.com/pimgs/m/266-2667252_transparent-rock-paper-scissors-clipart-rock-paper-scissors.png"
+  img.src="paper.png";
   document.getElementById("computer-move").appendChild(img);
 }
+
