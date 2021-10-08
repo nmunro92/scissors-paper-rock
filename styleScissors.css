@@ -1,9 +1,10 @@
 html {
     /* background-color: blue; */
     font-family: sans-serif;
+    font-weight: bold;
 }
 
-header, #subtitle, #score, #result {
+header, #subtitle, #choice, #result {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -29,19 +30,21 @@ header, #subtitle, #score, #result {
     height: 15em;
     width: 17em;
     margin: 2em;
-    border: solid white 1.5px;
 }
 
 #player-header, #computer-header {
     background-color: black;
     color: white;
-    margin-top: 0;
     width: inherit;
     height: 3em;
     text-align: center;
-    position: fixed;
-    border-bottom: solid white 1.5px;
+    margin: 0;
+}
 
+#computer-header-div > p, #player-header > p{
+ margin: 0px;
+ padding-top: 1em;
+    
 }
 
 #computer-move, #player-move {
@@ -58,5 +61,9 @@ header, #subtitle, #score, #result {
 img {
     width: 6em;
     height: 6em;
+    background-color:  rgb(43, 43, 43);
+    border-radius: 20%;
+    border: none;
+
 
 }

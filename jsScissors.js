@@ -7,7 +7,7 @@ let playerSelection;
 //Get the players name
 let playerName = prompt("What's your name?");
 
-//Display the name where ever needed, but player if null
+//Display the name where ever needed, but player if nothing entered
 if (playerName == undefined || playerName == null || playerName == "") {
   playerName = "Player";
 }
@@ -33,12 +33,15 @@ function playRock() {
   showIMG();
   if (playerSelection == computerSelection) {
     document.getElementById("result").innerHTML = "Tie!";
+    document.getElementById("result").style.color = "orange";
   } else if (computerSelection == "scissors") {
     document.getElementById("result").innerHTML = "You win!";
+    document.getElementById("result").style.color = "green";
     playerScore++;
     document.getElementById("playerscore").textContent = playerScore;
   } else if (computerSelection == "paper") {
     document.getElementById("result").innerHTML = "You lose!";
+    document.getElementById("result").style.color = "red";
     computerScore++;
     document.getElementById("computerscore").textContent = computerScore;
   }
@@ -63,12 +66,15 @@ function playScissors() {
     showIMG ();
   if (playerSelection == computerSelection) {
     document.getElementById("result").innerHTML = "Tie!";
+    document.getElementById("result").style.color = "orange";
   } else if (computerSelection == "paper") {
     document.getElementById("result").innerHTML = "You win!";
+    document.getElementById("result").style.color = "green";
     playerScore++;
     document.getElementById("playerscore").textContent = playerScore;
   } else if (computerSelection == "rock") {
     document.getElementById("result").innerHTML = "You lose!";
+    document.getElementById("result").style.color = "red";
     computerScore++;
     document.getElementById("computerscore").textContent = computerScore;
   }
@@ -92,15 +98,18 @@ function playPaper() {
   showIMG ();
   if (playerSelection == computerSelection) {
     document.getElementById("result").innerHTML = "Tie!";
+    document.getElementById("result").style.color = "orange";
     //showCompPaper();
   } else if (computerSelection == "rock") {
     //showCompRock();
     document.getElementById("result").innerHTML = "You win!";
+    document.getElementById("result").style.color = "red";
     playerScore++;
     document.getElementById("playerscore").textContent = playerScore;
   } else if (computerSelection == "scissors") {
     //showCompScissors ();
     document.getElementById("result").innerHTML = "You lose!";
+    document.getElementById("result").style.color = "red";
     computerScore++;
     document.getElementById("computerscore").textContent = computerScore;
   }
