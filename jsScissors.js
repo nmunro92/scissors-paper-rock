@@ -3,7 +3,6 @@ let playerScore = 0;
 let computerScore = 0;
 let playerSelection;
 
-
 //Get the players name
 let playerName = prompt("What's your name?");
 
@@ -23,11 +22,11 @@ function playRock() {
   computerPlay();
   const computerSelection = computerPlay();
   if (computerSelection == "rock") {
-    showCompRock ();
+    showCompRock();
   } else if (computerSelection == "scissors") {
-    showCompScissors ();
+    showCompScissors();
   } else if (computerSelection == "paper") {
-    showCompPaper ();
+    showCompPaper();
   }
   playerSelection = "rock";
   showIMG();
@@ -52,18 +51,18 @@ const scissorDiv = document.getElementById("scissors");
 scissorDiv.addEventListener("click", playScissors);
 function playScissors() {
   let myArray = ["rock", "paper", "scissors"];
-  computerPlay(); 
+  computerPlay();
   const computerSelection = computerPlay();
   if (computerSelection == "rock") {
-    showCompRock ();
+    showCompRock();
   } else if (computerSelection == "scissors") {
-    showCompScissors ();
+    showCompScissors();
   } else if (computerSelection == "paper") {
-    showCompPaper ();
+    showCompPaper();
   }
   playerSelection = "scissors";
   //showScissors ();
-    showIMG ();
+  showIMG();
   if (playerSelection == computerSelection) {
     document.getElementById("result").innerHTML = "Tie!";
     document.getElementById("result").style.color = "orange";
@@ -85,17 +84,17 @@ const paperDiv = document.getElementById("paper");
 paperDiv.addEventListener("click", playPaper);
 
 function playPaper() {
-  computerPlay(); 
+  computerPlay();
   const computerSelection = computerPlay();
   if (computerSelection == "rock") {
-    showCompRock ();
+    showCompRock();
   } else if (computerSelection == "scissors") {
-    showCompScissors ();
+    showCompScissors();
   } else if (computerSelection == "paper") {
-    showCompPaper ();
+    showCompPaper();
   }
   playerSelection = "paper";
-  showIMG ();
+  showIMG();
   if (playerSelection == computerSelection) {
     document.getElementById("result").innerHTML = "Tie!";
     document.getElementById("result").style.color = "orange";
@@ -103,7 +102,7 @@ function playPaper() {
   } else if (computerSelection == "rock") {
     //showCompRock();
     document.getElementById("result").innerHTML = "You win!";
-    document.getElementById("result").style.color = "red";
+    document.getElementById("result").style.color = "green";
     playerScore++;
     document.getElementById("playerscore").textContent = playerScore;
   } else if (computerSelection == "scissors") {
@@ -125,45 +124,44 @@ document.getElementById("computerscore").textContent = computerScore;
 document.getElementById("playerscore").textContent = playerScore;
 
 //updating the player choice image
-function clearDiv () {
+function clearDiv() {
   document.getElementById("player-move").innerHTML = "";
 }
 
-function clearCompDiv () {
+function clearCompDiv() {
   document.getElementById("computer-move").innerHTML = "";
 }
 
 function showIMG() {
   clearDiv();
-  let img = new Image ();
-  if (playerSelection == "rock"){
-  img.src="rock.png"
+  let img = new Image();
+  if (playerSelection == "rock") {
+    img.src = "rock.png";
   } else if (playerSelection == "scissors") {
-    img.src="scissors.png"
+    img.src = "scissors.png";
   } else if (playerSelection == "paper") {
-    img.src= "paper.png"
+    img.src = "paper.png";
   }
   document.getElementById("player-move").appendChild(img);
 }
 
 function showCompRock() {
   clearCompDiv();
-  let img = new Image ();
-  img.src="rock.png";
+  let img = new Image();
+  img.src = "rock.png";
   document.getElementById("computer-move").appendChild(img);
 }
 
 function showCompScissors() {
   clearCompDiv();
-  let img = new Image ();
-  img.src="scissors.png";
+  let img = new Image();
+  img.src = "scissors.png";
   document.getElementById("computer-move").appendChild(img);
 }
 
 function showCompPaper() {
   clearCompDiv();
-  let img = new Image ();
-  img.src="paper.png";
+  let img = new Image();
+  img.src = "paper.png";
   document.getElementById("computer-move").appendChild(img);
 }
-
