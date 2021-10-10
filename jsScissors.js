@@ -32,15 +32,15 @@ function playRock() {
   playerSelection = "rock";
   showIMG();
   if (playerSelection == computerSelection) {
-    document.getElementById("result").innerHTML = "Tie!";
+    document.getElementById("result").innerText = "Tie!";
     document.getElementById("result").style.color = "orange";
   } else if (computerSelection == "scissors") {
-    document.getElementById("result").innerHTML = "You win!";
+    document.getElementById("result").innerText = "You win!";
     document.getElementById("result").style.color = "green";
     playerScore++;
     document.getElementById("playerscore").textContent = playerScore;
   } else if (computerSelection == "paper") {
-    document.getElementById("result").innerHTML = "You lose!";
+    document.getElementById("result").innerText = "You lose!";
     document.getElementById("result").style.color = "red";
     computerScore++;
     document.getElementById("computerscore").textContent = computerScore;
@@ -66,15 +66,15 @@ function playScissors() {
   //showScissors ();
   showIMG();
   if (playerSelection == computerSelection) {
-    document.getElementById("result").innerHTML = "Tie!";
+    document.getElementById("result").innerText = "Tie!";
     document.getElementById("result").style.color = "orange";
   } else if (computerSelection == "paper") {
-    document.getElementById("result").innerHTML = "You win!";
+    document.getElementById("result").innerText = "You win!";
     document.getElementById("result").style.color = "green";
     playerScore++;
     document.getElementById("playerscore").textContent = playerScore;
   } else if (computerSelection == "rock") {
-    document.getElementById("result").innerHTML = "You lose!";
+    document.getElementById("result").innerText = "You lose!";
     document.getElementById("result").style.color = "red";
     computerScore++;
     document.getElementById("computerscore").textContent = computerScore;
@@ -99,18 +99,18 @@ function playPaper() {
   playerSelection = "paper";
   showIMG();
   if (playerSelection == computerSelection) {
-    document.getElementById("result").innerHTML = "Tie!";
+    document.getElementById("result").innerText = "Tie!";
     document.getElementById("result").style.color = "orange";
     //showCompPaper();
   } else if (computerSelection == "rock") {
     //showCompRock();
-    document.getElementById("result").innerHTML = "You win!";
+    document.getElementById("result").innerText = "You win!";
     document.getElementById("result").style.color = "green";
     playerScore++;
     document.getElementById("playerscore").textContent = playerScore;
   } else if (computerSelection == "scissors") {
     //showCompScissors ();
-    document.getElementById("result").innerHTML = "You lose!";
+    document.getElementById("result").innerText = "You lose!";
     document.getElementById("result").style.color = "red";
     computerScore++;
     document.getElementById("computerscore").textContent = computerScore;
@@ -129,11 +129,11 @@ document.getElementById("playerscore").textContent = playerScore;
 
 //updating the player choice image
 function clearDiv() {
-  document.getElementById("player-move").innerHTML = "";
+  document.getElementById("player-move").innerText = "";
 }
 
 function clearCompDiv() {
-  document.getElementById("computer-move").innerHTML = "";
+  document.getElementById("computer-move").innerText = "";
 }
 
 function showIMG() {
