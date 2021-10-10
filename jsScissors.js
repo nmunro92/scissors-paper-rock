@@ -3,6 +3,7 @@ let playerScore = 0;
 let computerScore = 0;
 let playerSelection;
 
+
 //Get the players name
 let playerName = prompt("What's your name?");
 
@@ -44,6 +45,7 @@ function playRock() {
     computerScore++;
     document.getElementById("computerscore").textContent = computerScore;
   }
+  winner ();
 }
 
 //Add listener to scissors
@@ -77,6 +79,7 @@ function playScissors() {
     computerScore++;
     document.getElementById("computerscore").textContent = computerScore;
   }
+  winner ();
 }
 
 //add listener to Paper
@@ -112,6 +115,7 @@ function playPaper() {
     computerScore++;
     document.getElementById("computerscore").textContent = computerScore;
   }
+  winner ();
 }
 
 let myArray = ["rock", "paper", "scissors"];
@@ -164,4 +168,16 @@ function showCompPaper() {
   let img = new Image();
   img.src = "paper.png";
   document.getElementById("computer-move").appendChild(img);
+}
+
+function winner () {
+  if (playerScore >= 5)
+  {
+    alert(`${playerName} wins!`);
+    location.reload();
+  } else if (computerScore >= 5)
+  {
+    alert("Computer wins!");
+    location.reload();
+  }
 }
